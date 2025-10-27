@@ -30,10 +30,10 @@ class _TipoState extends State<Tipo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 219, 219, 219),
       body: Center(
         child: Stack(
           children: [
-            fundo.fundo_pokebola(),
             ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -103,7 +103,7 @@ class _TipoState extends State<Tipo> {
           child:Padding(padding: EdgeInsetsGeometry.only(bottom: 25),
           child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
+                    backgroundColor: const Color.fromARGB(255, 202, 132, 127),
                     minimumSize:Size(180, 130)
                   ),
                   onPressed: (){

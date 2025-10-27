@@ -30,10 +30,9 @@ class _GeracaoState extends State<Geracao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 219, 219, 219),
       body: Stack(
-        children: [
-        fundo.fundo_pokebola(),
-        
+        children: [        
         ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -84,7 +83,7 @@ class _GeracaoState extends State<Geracao> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+                  backgroundColor: const Color.fromARGB(255, 202, 132, 127),
                   minimumSize:Size(180, 130)
                 ),
                 onPressed: (){

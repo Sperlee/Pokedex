@@ -21,12 +21,11 @@ class _NomeState extends State<Nome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: const Color.fromARGB(255, 219, 219, 219),
       body: Center(
         child: Stack(
           alignment: Alignment.center,
           children: [
-            fundo.fundo_pokebola(),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

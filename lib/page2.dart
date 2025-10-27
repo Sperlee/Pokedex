@@ -6,7 +6,7 @@ import 'package:pokedex_app/filtros/nome.dart';
 import 'package:pokedex_app/filtros/tipo.dart';
 import 'package:pokedex_app/home.dart';
 
-const Color button_color = Color.fromARGB(255, 197, 100, 76);
+const Color button_color = Colors.red;
 
 
 class Page2 extends StatefulWidget {
@@ -22,17 +22,23 @@ class _Page2State extends State<Page2> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: const Color.fromARGB(255, 219, 219, 219),
       body: Center(
         child: Stack(
           //alignment: Alignment.center,
           children: [
-            fundo.fundo_pokebola(),
             Padding(
               padding: EdgeInsetsGeometry.only(top: 20),
               child:Align(
               alignment: Alignment.topCenter,
-              child:  Text("Filtrar por:",style: TextStyle(fontSize: 30,color: Colors.white),)
+              child:  Container(
+                width: 200,
+                decoration: BoxDecoration(
+                  borderRadius:BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 179, 179, 179)
+                ),
+                child: Text("Filtrar por:",textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.white),),
+              )
              ),
             ),
             Container(
@@ -45,22 +51,22 @@ class _Page2State extends State<Page2> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.red,
                           minimumSize:Size(180, 130)
                         ),
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context) => Geracao()));
                         },
-                        child: Text("geração",style: TextStyle(color: Colors.black,fontSize: 25),)),
+                        child: Text("geração",style: TextStyle(color: Colors.white,fontSize: 25),)),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.red,
                           minimumSize:Size(180, 130)
                         ),
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context) => Habitat(_habitat)));
                         },
-                        child: Text("habitat",style: TextStyle(color: Colors.black,fontSize: 25),)),
+                        child: Text("habitat",style: TextStyle(color: Colors.white,fontSize: 25),)),
                     ],
                   ),
                   Row(
@@ -68,22 +74,22 @@ class _Page2State extends State<Page2> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: button_color,
+                          backgroundColor: Colors.white,
                           minimumSize:Size(180, 130)
                         ),
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context) => Tipo()));
                         },
-                        child: Text("tipo",style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255),fontSize: 25))),
+                        child: Text("tipo",style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0),fontSize: 25))),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: button_color,
+                          backgroundColor: Colors.white,
                           minimumSize:Size(180, 130)
                         ),
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context) => Nome()));
                         },
-                        child: Text("nome/ID",style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255),fontSize: 25))),
+                        child: Text("nome/ID",style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0),fontSize: 25))),
                     ],
                   )
                 ],
